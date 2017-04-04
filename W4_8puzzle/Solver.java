@@ -78,7 +78,7 @@ class SearchNode implements Comparable<SearchNode> {
     public int moves() {                    // min number of moves to solve initial board; -1 if unsolvable
       if (!isSolvable())
         return -1;
-      else 
+      else
         return sequences.size()-1;
     }
     
