@@ -32,10 +32,10 @@ class SearchNode implements Comparable<SearchNode> {
   }
   public class Solver {
     private boolean solved;
-    private List<Board> sequences = new ArrayList<>();
-    private MinPQ<SearchNode> pq = new MinPQ<>();
-    
+		private List<Board> sequences = new ArrayList<>();
+
     public Solver(Board initial) {           // find a solution to the initial board (using the A* algorithm)
+      MinPQ<SearchNode> pq = new MinPQ<>();
       SearchNode nd = new SearchNode(initial, null, 0, false);
       SearchNode twinNd = new SearchNode(initial.twin(), null, 0, true);
       pq.insert(nd);
